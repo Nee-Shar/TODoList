@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="index.js" defer></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+ <!-- Compiled and minified CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Frijole&family=Oswald:wght@600&family=Poller+One&display=swap');
+.title{
+    display: flex;
+    padding-left: 100px;
+    padding-top: 100px;
+}
+.ff{
+    font-family: 'Poller One', cursive;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 100px;
+    text-align: center;
+    /* font-size: 70px; */
+}
+.bttn{
+    margin-top: 99px;
+}
+</style>
+
+
+
+
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Notify</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">JavaScript</a></li>
+          </ul>
+        </div>
+      </nav>
+    <h1 class="ff"> Lets Keep a Note !</h1>
+    <div class="title">
+    
+        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_hylaaytn.json" mode="bounce" background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+        
+        <h3 class="ff">Create a New Note
+        </h3>
+        <a class="btn-floating btn-large waves-effect waves-light red bttn btn modal-trigger "  href="#modal1"><i class="material-icons">+</i></a>
+        
+        
+
+
+        <!-- 
+        
+        <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_bTOdru.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player> -->
+    </div>
+    <div class="title">
+        <lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_rhwceowh.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+
+        <h3 class="ff">Open a written Note
+        </h3>
+        
+  <button class="btn waves-effect waves-light bttn round btn modal-trigger"  data-target="modal1"  >Open
+    <i class="material-icons right"></i>
+  </button>
+    </div>
+
+    <div class="title">
+        <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_4w6xksiq.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+        <h3 class="ff">Delete a written Note
+        </h3>
+        
+  <button class="btn waves-effect waves-light bttn round red" type="submit" name="action">Delete
+    <i class="material-icons right"></i>
+  </button>
+    </div>
+
+    <div class="title">
+        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_h58m3bbj.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>        <h3 class="ff">Edit a written Note
+        </h3>
+        
+  <button class="btn waves-effect waves-light bttn round " type="submit" name="action">Edit
+    <i class="material-icons right"></i>
+  </button>
+    </div>
+
+
+<!-- Create a Note Modal -->
+  <!-- Modal Trigger -->
+  <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="page-footer">
+        <div class="container">
+            © 2023 Copyright Nee-Shar
+            <a class="grey-text text-lighten-4 right" href="#!">Made with ❤️ By Nee-Shar</a>
+            </div>
+        </footer>
+</body>
+</html>
