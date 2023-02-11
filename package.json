@@ -1,0 +1,10 @@
+{
+  "name": "To_Do_List",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Nee-Shar",
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "^9.17.1"
+  }
+}

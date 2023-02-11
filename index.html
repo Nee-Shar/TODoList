@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
+    <title>To Do List</title>
 <script src="index.js" defer></script>
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
  <!-- Compiled and minified CSS -->
@@ -25,8 +26,12 @@
     /* font-size: 70px; */
 }
 .bttn{
-    margin-top: 99px;
+    margin-top: 6%;
 }
+body{
+  background-color: #080710; 
+  color:white;
+  }
 </style>
 
 
@@ -34,24 +39,15 @@
 
 </head>
 <body>
-    <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo">Notify</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">JavaScript</a></li>
-          </ul>
-        </div>
-      </nav>
-    <h1 class="ff"> Lets Keep a Note !</h1>
+   
+    <h1 class="ff"> Lets Keep a Note ! </h1>
     <div class="title">
     
         <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_hylaaytn.json" mode="bounce" background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
         
         <h3 class="ff">Create a New Note
-        </h3>
-        <a class="btn-floating btn-large waves-effect waves-light red bttn btn modal-trigger "  href="#modal1"><i class="material-icons">+</i></a>
+        </h3> 
+        <a class="btn-floating btn-large waves-effect waves-light red bttn btn modal-trigger "  href="write.html"><i class="material-icons">+</i></a>
         
         
 
@@ -61,31 +57,41 @@
         <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_bTOdru.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player> -->
     </div>
     <div class="title">
-        <lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_rhwceowh.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
-
-        <h3 class="ff">Open a written Note
+      <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_oQgDx4QeDU.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+      <h3 class="ff">See All Notes
         </h3>
         
-  <button class="btn waves-effect waves-light bttn round btn modal-trigger"  data-target="modal1"  >Open
+  <button class="btn waves-effect waves-light bttn round btn modal-trigger"    onclick="window.location.href = 'viewlist.html'" id="view">Go</button> 
     <i class="material-icons right"></i>
   </button>
     </div>
 
     <div class="title">
-        <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_4w6xksiq.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
-        <h3 class="ff">Delete a written Note
+      <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_bo8vqwyw.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+      <h3 class="ff">Search a note from Heading
         </h3>
         
-  <button class="btn waves-effect waves-light bttn round red" type="submit" name="action">Delete
+  <button class="btn waves-effect waves-light bttn round red" type="submit" name="action"  onclick="window.location.href = 'search.html'" id="del">Search</button>
     <i class="material-icons right"></i>
   </button>
     </div>
 
     <div class="title">
-        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_h58m3bbj.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>        <h3 class="ff">Edit a written Note
+      <lottie-player src="https://assets10.lottiefiles.com/private_files/lf30_ilvzxix1.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+      <h3 class="ff">Delete A Note
         </h3>
         
-  <button class="btn waves-effect waves-light bttn round " type="submit" name="action">Edit
+  <button class="btn waves-effect waves-light bttn round red" type="submit" name="action"  onclick="window.location.href = 'delete.html'" id="actualDel">Delete</button>
+    <i class="material-icons right"></i>
+  </button>
+    </div>
+    <div class="title">
+      <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_ecsh092g.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+
+      <h3 class="ff">Edit a written Note
+        </h3>
+        
+  <button class="btn waves-effect waves-light bttn round " type="submit" name="action" onclick="window.location.href = 'edit.html'">Edit
     <i class="material-icons right"></i>
   </button>
     </div>
@@ -96,15 +102,7 @@
   <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
 
   <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div>
+  
 
 
 
@@ -114,13 +112,15 @@
 
 
 
+  <footer style="text-align: center;">
+    <p>Made With ❤️ By NeeShar</p>
+    <p><a href="mailto:hege@example.com">neeraj716sharma@gmail.com</a></p>
+  </footer>
+      
+      
+<script type="module" src="index.js"> </script>
 
 
-    <footer class="page-footer">
-        <div class="container">
-            © 2023 Copyright Nee-Shar
-            <a class="grey-text text-lighten-4 right" href="#!">Made with ❤️ By Nee-Shar</a>
-            </div>
-        </footer>
-</body>
+      
+      </body>
 </html>

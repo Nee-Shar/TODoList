@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View List</title>
+<!--     
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+
+</head>
+<style>
+    body{
+    background-color: #080710;
+    color:white;
+}
+
+
+
+
+@import "compass/css3";
+
+div {
+  width: 500px;
+  margin: 30px;
+}
+
+h2 {
+  font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+a{
+    text-decoration: none;
+}
+li {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+
+li:last-child {
+  border: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #f7dada;
+
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+  display: block;
+  width: 300px;
+}
+
+li a:hover {
+  font-size: 25px;
+  background: #332d2d;
+}
+
+.button-18 {
+  align-items: center;
+  background-color: #0A66C2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  margin-top: 350px;
+  margin-left: 350px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  
+  -webkit-user-select: none;
+  vertical-align: middle;
+  
+}
+
+.button-18:hover,
+.button-18:focus { 
+  background-color: #16437E;
+  color: #ffffff;
+}
+
+.button-18:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+.button-18:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+body{
+    text-align: center;
+}
+.lot{
+  margin-top: 10%;
+  position: absolute;
+    top: 10%;
+    left: 45%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 380px;
+    height: 380px;
+}
+.list{
+  margin-top: 50%;
+  position: absolute;
+    top: 60%;
+    left: 45%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 580px;
+    height: 380px;
+}
+/* .listb{
+  margin-top: 70%;
+  position: absolute;
+    top: 50%;
+    left: 45%;
+    margin-top: -50px;
+    margin-left: -50px;
+    
+} */
+</style>
+<body>
+    <div>
+        
+<lottie-player src="https://assets7.lottiefiles.com/packages/lf20_outxntop.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;" class="lot" loop  autoplay></lottie-player>
+       
+<button type="button" class="button-18 " id="view">View</button>
+        <ul id="Viewing" class="list" style="display: none;">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+           <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      
+      
+      
+<script type="module" src="viewing.js"> </script>
+
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
