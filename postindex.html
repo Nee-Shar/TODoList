@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>To Do List</title>
+<script src="index.js" defer></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+ <!-- Compiled and minified CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Frijole&family=Oswald:wght@600&family=Poller+One&display=swap');
+.title{
+    display: flex;
+    padding-left: 100px;
+    padding-top: 100px;
+}
+.ff{
+    font-family: 'Poller One', cursive;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 100px;
+    text-align: center;
+    /* font-size: 70px; */
+}
+.bttn{
+    margin-top: 6%;
+}
+body{
+  background-color: #080710; 
+  color:white;
+  }
+</style>
+
+
+
+
+</head>
+<body>
+   
+    <h1 class="ff"> Lets Keep a Note ! </h1>
+    <div class="title">
+    
+        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_hylaaytn.json" mode="bounce" background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+        
+        <h3 class="ff">Create a New Note
+        </h3> 
+        <a class="btn-floating btn-large waves-effect waves-light red bttn btn modal-trigger "  href="write.html"><i class="material-icons">+</i></a>
+        
+        
+
+
+        <!-- 
+        
+        <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_bTOdru.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player> -->
+    </div>
+    <div class="title">
+      <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_oQgDx4QeDU.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+      <h3 class="ff">See All Notes
+        </h3>
+        
+  <button class="btn waves-effect waves-light bttn round btn modal-trigger"    onclick="window.location.href = 'viewlist.html'" id="view">Go</button> 
+    <i class="material-icons right"></i>
+  </button>
+    </div>
+
+    <div class="title">
+      <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_bo8vqwyw.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+      <h3 class="ff">Search a note from Heading
+        </h3>
+        
+  <button class="btn waves-effect waves-light bttn round red" type="submit" name="action"  onclick="window.location.href = 'search.html'" id="del">Search</button>
+    <i class="material-icons right"></i>
+  </button>
+    </div>
+
+    <div class="title">
+      <lottie-player src="https://assets10.lottiefiles.com/private_files/lf30_ilvzxix1.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+      <h3 class="ff">Delete A Note
+        </h3>
+        
+  <button class="btn waves-effect waves-light bttn round red" type="submit" name="action"  onclick="window.location.href = 'delete.html'" id="actualDel">Delete</button>
+    <i class="material-icons right"></i>
+  </button>
+    </div>
+    <div class="title">
+      <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_ecsh092g.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+
+      <h3 class="ff">Edit a written Note
+        </h3>
+        
+  <button class="btn waves-effect waves-light bttn round " type="submit" name="action" onclick="window.location.href = 'edit.html'">Edit
+    <i class="material-icons right"></i>
+  </button>
+    </div>
+
+
+<!-- Create a Note Modal -->
+  <!-- Modal Trigger -->
+  <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
+
+  <!-- Modal Structure -->
+  
+
+
+
+
+
+
+
+
+
+  <footer style="text-align: center;">
+    <p>Made With ❤️ By NeeShar</p>
+    <p><a href="mailto:hege@example.com">neeraj716sharma@gmail.com</a></p>
+  </footer>
+      
+      
+<script type="module" src="index.js"> </script>
+
+
+      
+      </body>
+</html>

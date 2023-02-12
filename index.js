@@ -1,7 +1,11 @@
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js';
 
-import { getFirestore,collection,setDoc,doc,addDoc,getDoc,updateDoc,deleteDoc} from 'https://www.gstatic.com/firebasejs/9.16.0/firebase-firestore.js';
+import { getFirestore,collection,setDoc,doc,addDoc,getDoc,getDocs,updateDoc,deleteDoc, query, where} from 'https://www.gstatic.com/firebasejs/9.16.0/firebase-firestore.js';
+
+import { deleteUser,updateProfile,createUserWithEmailAndPassword,signOut,getAuth, signInWithEmailAndPassword,GoogleAuthProvider,signInWithPopup,sendPasswordResetEmail } from 'https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js';
+// TODO: Replace the following with your app's Firebase project configuration
 
 
 
@@ -19,74 +23,207 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-const db = getFirestore(app);
-let head=document.getElementById("heading");
-let content=document.getElementById("note");
-
-let write=document.getElementById("write");
+const auth = getAuth();
 
 
-let status=document.getElementById('status');
+const provider = new GoogleAuthProvider();
 
 
-function removeSpaces(string) {
-      return string.split(' ').join('');
-     }
-async function AddDocumentCustomId(){
-   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const signUpActutal=document.getElementById("ActSignUp");
+const signInActual=document.getElementById("ActSignIn");
+const signUpWithG=document.getElementById("signUpG");
+
+
+
+signUpActutal.addEventListener("click",function(){
+
+
+    var email=document.querySelectorAll("input")[1].value;
+    var password=
+   document.querySelectorAll("input")[2].value;
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        console.log(user);
+      
+      
+    
+        // updateProfile(auth.currentUser, {
+        //   displayName: "User"
+        // }).then(() => {
+        //   // Profile updated!
+        //   // ...
+        // }).catch((error) => {
+        //   // An error occurred
+        //   // ...
+        // });
+      
     
     
-
-        console.log(head.value);
     
-        console.log(content.value);
-
-
-        console.log(new Date());
-let d=new Date();
-      var ref=doc(db,"Notes",removeSpaces(head.value));
-      const docRef= await setDoc(ref,{
-      Heading: removeSpaces(head.value),
-      Content: content.value,
-      Day: d.getDate(),
-      Month: d.getMonth()+1,
-      Year:d.getFullYear()
-      })
       
-      
-      
-      .then(()=>{
-        
-console.log("written");  
-
-
-document.querySelectorAll("input")[1].placeholder="Saved Successfully";
-
-
-
-})
-      .catch((error)=>{
-        
-            alert("Error"+error);
-            
-console.log("not written");
-            
-      
-      
+        alert("Successfully Registred "+document.querySelectorAll("input")[0].value);
+    // self.location="index.html";
+   self.location="preindex.html";
+    
+    
+        // ...
+      })  
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode,errorMessage);
+        alert("Error");
+        location.reload();
+        // ..
       });
     
-   
-   
-    }
+    });
     
     
-    
-write.addEventListener("click",AddDocumentCustomId);
+    signUpWithG.addEventListener("click",function(){
+
+
+        signInWithPopup(auth, provider)
+          .then((result) => {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+            console.log(token);
+            // The signed-in user info.
+ 
+            console.log(user);
+            // ...
+          }).catch((error) => {
+            // Handle Errors here.
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // The email of the user's account used.
+            const email = error.customData.email;
+            // The AuthCredential type that was used.
+            const credential = GoogleAuthProvider.credentialFromError(error);
+            alert("Error");
+            // ...
+          });
+        }
+        );
+        
+        
 
 
 
 
 
+
+
+        //LOGIN MODULE
+signInActual.addEventListener("click",function(){
+
+
+  var email=document.querySelectorAll("input")[3].value;
+  var password=document.querySelectorAll("input")[4].value;
+console.log(email);
+
+  // var email=document.getElementById("login").value;
+  // var password=document.getElementById("login_password").value;
+/// const 
+const auth = getAuth();
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+      console.log("LOGGED IN");
+      alert("Successfully LOGGED IN");
+      //M.toast({html: 'Successfully Loged in',classes:"green rounded",outDuration:50})
+  self.location="postindex.html";
+      
+  
+  
+  
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode,errorMessage);
+      alert(errorCode,errorMessage)
+      location.reload();
+    });
+  
+  
+  
+  })
+  
+
+  //Forget PSSD
+  //FORGET PSSWD MODULE
+document.getElementById("forget").addEventListener("click",function(){
+
+  var email=document.querySelectorAll("input")[3].value;
+
+
+
+sendPasswordResetEmail(auth, email)
+  .then(() => {
+   // M.toast({html: 'Password reset email sent!',classes:"green",outDuration:50})
+     alert("Password Reset Mail sent to  "+email);
+     location.reload();
+    // ..
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+   // M.toast({html:errorMessage,classes:"red rounded"})
+   alert(errorMessage); 
+   // ..
+  });});
 
 
