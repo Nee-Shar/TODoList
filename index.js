@@ -158,16 +158,10 @@ signUpActutal.addEventListener("click",function(){
         
         
 
-
-
-
-
-
-
         //LOGIN MODULE
-signInActual.addEventListener("click",function(){
+signInActual.addEventListener("click",login);
 
-
+async function login(){
   var email=document.querySelectorAll("input")[3].value;
   var password=document.querySelectorAll("input")[4].value;
 console.log(email);
@@ -175,7 +169,7 @@ console.log(email);
   // var email=document.getElementById("login").value;
   // var password=document.getElementById("login_password").value;
 /// const 
-const auth = getAuth();
+//const auth = getAuth();
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in 
@@ -200,8 +194,16 @@ const auth = getAuth();
   
   
   
-  })
+  }
   
+
+
+
+
+
+
+
+        //LOGIN MODULE
 
   //Forget PSSD
   //FORGET PSSWD MODULE
