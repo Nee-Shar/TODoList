@@ -141,6 +141,7 @@ signUpActutal.addEventListener("click",function(){
             // The signed-in user info.
  
             console.log(user);
+        self.location="postindex.html";
             // ...
           }).catch((error) => {
             // Handle Errors here.
