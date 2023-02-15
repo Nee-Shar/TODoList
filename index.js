@@ -146,6 +146,7 @@ signUpActutal.addEventListener("click",function(){
             // The signed-in user info.
  
             console.log(user);
+		alert("Welcome "+user.displayName);
         self.location="postindex.html";
             // ...
           }).catch((error) => {
