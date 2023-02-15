@@ -88,26 +88,30 @@ signUpActutal.addEventListener("click",function(){
     var email=document.querySelectorAll("input")[1].value;
     var password=
    document.querySelectorAll("input")[2].value;
+	var name=document.querySelectorAll("input")[0].value;
+   
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
+	    
+        auth.currentUser.displayName=name;
         console.log(user);
       
       
     
-        // updateProfile(auth.currentUser, {
-        //   displayName: "User"
-        // }).then(() => {
-        //   // Profile updated!
-        //   // ...
-        // }).catch((error) => {
-        //   // An error occurred
-        //   // ...
-        // });
-      
+       
     
     
+        updateProfile(auth.currentUser, {
+          displayName: name
+        }).then(() => {
+          // Profile updated!
+          // ...
+        }).catch((error) => {
+          // An error occurred
+          // ...
+        });
     
       
         alert("Successfully Registred "+document.querySelectorAll("input")[0].value);
@@ -176,6 +180,8 @@ console.log(email);
     .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
+	        alert("Welcome " +auth.currentUser.displayName);
+
       console.log("LOGGED IN");
       alert("Successfully LOGGED IN");
       //M.toast({html: 'Successfully Loged in',classes:"green rounded",outDuration:50})
