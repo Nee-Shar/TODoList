@@ -182,8 +182,8 @@ console.log(email);
       const user = userCredential.user;
 	        alert("Welcome " +auth.currentUser.displayName);
 
-      console.log("LOGGED IN");
-      alert("Successfully LOGGED IN");
+//       console.log("LOGGED IN");
+//       alert("Successfully LOGGED IN");
       //M.toast({html: 'Successfully Loged in',classes:"green rounded",outDuration:50})
   self.location="postindex.html";
       
