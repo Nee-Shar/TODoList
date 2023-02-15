@@ -112,7 +112,7 @@ signUpActutal.addEventListener("click",function(){
       
         alert("Successfully Registred "+document.querySelectorAll("input")[0].value);
     // self.location="index.html";
-   self.location="preindex.html";
+   self.location="postindex.html";
     
     
         // ...
