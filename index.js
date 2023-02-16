@@ -138,6 +138,8 @@ signUpActutal.addEventListener("click",function(){
   
   var name=document.querySelectorAll("input")[0].value;
 
+const db = getFirestore(app);
+
   var ref=doc(db,"Users",email);
   const docRef= await setDoc(ref,{
     Email:email,
