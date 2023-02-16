@@ -116,7 +116,7 @@ signUpActutal.addEventListener("click",function(){
       
         alert("Successfully Registred "+document.querySelectorAll("input")[0].value);
     // self.location="index.html";
-   self.location="postindex.html";
+   
     
     
         // ...
@@ -149,7 +149,7 @@ signUpActutal.addEventListener("click",function(){
   
   .then(()=>{
   
-  location. reload()
+  self.location="postindex.html";
   })
   .catch((error)=>{
       
