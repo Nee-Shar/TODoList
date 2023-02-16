@@ -131,7 +131,40 @@ signUpActutal.addEventListener("click",function(){
       });
     
     });
-    
+    async function AddDocumentCustomId(){
+
+
+  var email=document.querySelectorAll("input")[1].value;
+  
+  var name=document.querySelectorAll("input")[0].value;
+
+  var ref=doc(db,"Users",email);
+  const docRef= await setDoc(ref,{
+    Email:email,
+    Name:name,
+    Image_URL:" "
+  })
+  
+  
+  
+  .then(()=>{
+  
+  location. reload()
+  })
+  .catch((error)=>{
+      
+          alert("Error"+error);
+          
+  
+  location. reload()
+  
+  });
+  
+}
+
+signUpActutal.addEventListener("click",AddDocumentCustomId);
+
+
     
     signUpWithG.addEventListener("click",function(){
 
